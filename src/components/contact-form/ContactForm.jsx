@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { addContact } from '../../redux/contacts/contacts-operations';
 import { nanoid } from '@reduxjs/toolkit';
 import styles from './ContactForm.module.css';
+import contactsSelectors from '../../redux/contacts/contacts-selectors';
 
 class ContactForm extends Component {
   state = {
@@ -24,7 +25,9 @@ class ContactForm extends Component {
     );
 
     if (entryCheck) {
-      alert(`Either '${entryCheck.name}' or '${entryCheck.number}' already exists`);
+      alert(
+        `Either '${entryCheck.name}' or '${entryCheck.number}' already exists`,
+      );
     } else if (name.length === 0 || number.length === 0) {
       alert(`Please, fill in all the fields`);
     } else {
@@ -80,7 +83,7 @@ class ContactForm extends Component {
 }
 
 const mapStateToProps = state => ({
-  contacts: state.contacts.items,
+  contacts: contactsSelectors.getAllContacts(state),
 });
 
 const mapDispatchToProps = {

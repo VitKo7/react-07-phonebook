@@ -30,10 +30,6 @@ ContactListItem.propTypes = {
   deleteContact: PropTypes.func.isRequired,
 };
 
-// const mapStateToProps = state => ({
-//   // contacts: state.contacts,
-// });
-
 const mapDispatchToProps = {
   deleteContact,
 };

@@ -6,6 +6,7 @@ import Filter from './filter/Filter';
 import Loader from 'react-loader-spinner';
 import styles from './App.module.css';
 import { handleInput } from '../redux/contacts/contacts-actions';
+import contactsSelectors from '../redux/contacts/contacts-selectors';
 
 class App extends Component {
   state = {
@@ -39,7 +40,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  isLoadingContacts: state.contacts.loading,
+  isLoadingContacts: contactsSelectors.getLoading(state),
 });
 
 const mapDispatchToProps = {
