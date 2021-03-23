@@ -2,4 +2,7 @@
 
 Асинхронный Redux. Селекторы и библиотека Reselect
 
-// how to clean up the input filter form after 'Delete'? and is it neccesary?
+based & works only upon a local server:
+https://vitko7.github.io/goit-react-hw-07-phonebook/
+
+// how to clean up the input filter formafter 'Delete'? and is it neccesary?
