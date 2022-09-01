@@ -1,4 +1,4 @@
-# goit-react-hw-07-phonebook
+# react-07-phonebook
 
 Асинхронный Redux. Селекторы и библиотека Reselect
 
